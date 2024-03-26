@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Nosotros {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.Nosotros img {
+    width: 30%;
+}
+
+.Promociones {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+.Promociones img {
+    width: 70%;
+    margin: auto;
+}
+
+.Promociones .textoPromociones {
+    font-size: 200%;
+    text-align: center;
+    text-shadow: 0px 0px 2px white;
+    font-weight: bold;
+}
+
+.Promociones .textoPromociones a {
+    text-decoration: none;
+    color: red;
+}
+
+.TextoTitulo {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TextoTitulo h1 {
+    color: white;
+}
+
+.CatalogoImg {
+    padding: 1%;
+    display: flex;
+}
+
+.CatalogoImg img {
+    width: 100%;
+}
+
+.CatalogoImg a :hover {
+    cursor: pointer;
+    opacity: .4;
+}
+
+.Contactos {
+    padding: 1%;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contactos img {
+    width: 50%;
+}
+
+.Contactos .ItemsContactos .Redes {
+    display: flex;
+}
+.Contactos .ItemsContactos .Redes img {
+    width: 100%;
+    padding: 10%;
+}
+
+.Contactos .Formulario {
+    color: white;
+    text-align: center;
+    padding: auto;
+    margin: 1%;
+    padding: 1%;
+}
+
+.BarraVanvegacion {
+    background-color: grey;
+    display: flex;
+    align-items: center;
+}
+
+.BarraVanvegacion h1 {
+    color: white;
+}
+
+.BarraVanvegacion img {
+    width: 15%;
+    margin: auto;
+    display: flex;
+
+}
+
+.tarjetaPrenda {
+    padding: 1%;
+}
+
+.tarjetaCuerpo {
+    background-color: darkgray;
+    margin: auto;
+    padding: 1%;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.tarjetaCuerpo img {
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    margin: 1%;
+}
+
+.tarjetaCuerpo .Descripcion {
+}
+
+.tarjetaCuerpo .valores {
+    display: flex;
+    flex-direction: column;
+}
+
+.BonotesTrajeta {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tarjetaCuerpo .valores input {
+    margin-bottom: 6%;
+}
+
+.BonotesTrajeta {
+    background-color: gray;
+    padding: 1%;
+    width: 700px;
+    margin: auto;
+}
+
+.talla {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.talla button {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+    font-weight: bold;
+}
+
+.tituloCatalogo {
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+}
+
+.Footer {
+    background-color: gray;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.Footer img {
+    width: 5%;
+
+}

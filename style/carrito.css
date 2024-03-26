@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.textoInformativo {
+    text-align: center;
+}
+
+.tarjetaPrenda {
+    padding: 1%;
+}
+
+.tarjetaCuerpo {
+    background-color: darkgray;
+    margin: auto;
+    padding: 1%;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.tarjetaCuerpo img {
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    margin: 1%;
+}
+
+.tarjetaCuerpo .valores {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetaCuerpo .valores input {
+    margin-bottom: 6%;
+}
+
+.talla {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.talla button {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+    font-weight: bold;
+}
+
+.contPago {
+    background-color: gray;
+    padding: 1%;
+    text-align: center;
+}
+
+.formPago {
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formPago input {
+    width: auto;
+}
+
+#pagoFondo {
+    text-align: center;
+    padding: 1%;
+}
