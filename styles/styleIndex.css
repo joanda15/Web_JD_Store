@@ -1,0 +1,149 @@
+/* Universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+/* Imagen de presentacion */
+.Nosotros {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.Nosotros img {
+    width: 30%;
+}
+/* Promociones */
+.Promociones {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+.Promociones .textoPromociones {
+    font-size: 200%;
+    text-align: center;
+    text-shadow: 0px 0px 2px white;
+    font-weight: bold;
+}
+
+.Promociones .textoPromociones a {
+    text-decoration: none;
+    color: red;
+}
+/* Calatalogo */
+.CatalogoImg {
+    padding: 1%;
+    display: flex;
+}
+
+.CatalogoImg img {
+    width: 100%;
+}
+
+.CatalogoImg a :hover {
+    cursor: pointer;
+    opacity: .4;
+}
+/* Titulos banner */
+.TextoTitulo {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TextoTitulo h1 {
+    color: white;
+}
+/* Tarteja prenda */
+
+/* Componente de Promociones */
+
+/* Componente de Catalogo */
+
+/* Titulo Short, Vestidos, Calzado */
+.tituloCatalogo {
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+}
+/* Contactos */
+.Contactos {
+    padding: 1%;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contactos img {
+    width: 50%;
+}
+
+.Contactos .ItemsContactos .Redes {
+    display: flex;
+}
+.Contactos .ItemsContactos .Redes img {
+    width: 100%;
+    padding: 10%;
+}
+
+.Contactos .Formulario {
+    color: white;
+    text-align: center;
+    padding: auto;
+    margin: 1%;
+    padding: 1%;
+}
+/* Footer */
+.Footer {
+    background-color: gray;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+.Footer img {
+    width: 10%;
+}
+/* Rersponsive */
+@media screen and (max-width: 750px) {
+    /* Tarjeta */
+    .card-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Contactos */
+    .Contactos {
+        padding: 1%;
+        background-color: darkgray;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Footer */
+    .Footer {
+        background-color: gray;
+        padding: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -4,10 +4,17 @@
     padding: 0;
 }
 
+body {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
 .textoInformativo {
     text-align: center;
 }
-
+/* Tarteja prenda */
 .tarjetaPrenda {
     padding: 1%;
 }
@@ -51,7 +58,7 @@
     height: auto;
     font-weight: bold;
 }
-
+/* Barra de informacion */
 .contPago {
     background-color: gray;
     padding: 1%;
@@ -68,7 +75,7 @@
 .formPago input {
     width: auto;
 }
-
+/* Modal pago */
 #pagoFondo {
     text-align: center;
     padding: 1%;

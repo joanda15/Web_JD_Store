@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <!-- Titulo, autor e icono -->
+    <title>Carrito de compras</title>
+    <meta name="author" content="Joan David Gomezjurado Sánchez">
+    <link rel="icon" href="imgs/img/logo.png" type="icono">
+    <!-- Links externos -->
+    <link rel="stylesheet" href="styles/carritoCompras.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/carrito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Barra de navegacion -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/Index.html">
-                <img src="/imgs/img/logo.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/img/logo.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
             </a>
             Bienvenido al carrito de compras
         </div>
     </nav>
-
     <div class="textoInformativo">
         <h1>Lista de prendas</h1>
         <p>Selecione o quite las prendas para realizar la compra</p>
     </div>
-
     <!-- Tarteja prenda -->
-    <div class="tarjetaPrenda">
+    <div class="tarjetaPrenda" id="tarjetaPagas">
         <div class="tarjetaCuerpo">
-            <img src="/imgs/prendas/Shorts/short1.jfif" alt="">
+            <img src="imgs/prendas/Shorts/short1.jfif" alt="">
             <div class="Descripcion">
                 <h1>Nombre</h1>
                 <h3>Descripción</h3>
@@ -44,12 +49,9 @@
                         <option value="3">L</option>
                       </select>
                 </div>
-                
                 <div class="color">
-                    <!-- <label for="exampleColorInput" class="form-label"></label> -->
                     <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
                 </div>
-                
                 <div class="precio">
                     <h3>$100.000</h1>
                 </div>
@@ -61,7 +63,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Barra de informacion -->
     <div class="contPago">
         <div class="formPago">
             <label for="exampleColorInput" class="form-label">Numero de prendas</label>
@@ -86,7 +88,7 @@
                     <option value="1">Tarjeta de credito</option>
                     <option value="2">Efecty</option>
                     <option value="3">Nequi</option>
-                  </select>
+                </select>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="pago()">Pagar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -94,9 +96,8 @@
             </div>
         </div>
     </div>
-
-
+    <!-- Archivos script -->
+    <script src="scripts/validacionPerfilUsuario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
 </body>
 </html>
