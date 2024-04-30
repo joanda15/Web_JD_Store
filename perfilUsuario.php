@@ -56,6 +56,7 @@ $stmt->close();
                 <img src="imgs/img/logo.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
             </a>
             Bienvenido al perfil del usuario
+            <a href="carritoCompras.php"><i class="fa-solid fa-cart-shopping btn btn-warning"></i></a>
         </div>
     </nav>
     <!-- Controlador -->
@@ -95,6 +96,7 @@ $stmt->close();
             </table>
         </div>
         <div class="text-center">
+            <a href="indexUsuario.php" class="btn btn-warning"><i class="fa-solid fa-store"> I r  d e  c o m p r a s </i></i></a>
             <a href="modificarPoducto.php?id=<?= $datos['id'] ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
             <a onclick="return eliminar()" href="perfilUsuario.php?id=<?= $datos['id'] ?>" class="btn btn-danger"><i class="fa-solid fa-delete-left"></i> Eliminar Usuario</a>
         </div>

@@ -36,7 +36,7 @@
             <button class="nav-link text-dark" id="v-pills-cerrar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cerrar" type="button" role="tab" aria-controls="v-pills-cerrar" aria-selected="false">Cerrar seccion</button>
         </div>
         <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" id="v-pills-Usuario" role="tabpanel" aria-labelledby="v-pills-Usuario-tab" tabindex="0">Usuario</div>
+            <div class="tab-pane fade show active" id="v-pills-Usuario" role="tabpanel" aria-labelledby="v-pills-Usuario-tab" tabindex="0">Administrador</div>
             <div class="tab-pane fade" id="v-pills-prendas" role="tabpanel" aria-labelledby="v-pills-prendas-tab" tabindex="0">
                 Prendas
                 <!-- Registro de prenda nueva -->
@@ -61,35 +61,58 @@
                 </form>
                 <!-- Tabla prenda -->
                 <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Referencia</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Foto</th>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>            
-                        <?php
-                        include "apis/conexionDB.php";
-                        $sql = $conexion->query("SELECT * FROM productos");
-                        while ($datos = $sql->fetch_object()) {?>
-                            <tr>
-                                <td><?= $datos->id ?></td>
-                                <td><?= $datos->nombre ?></td>
-                                <td><?= $datos->imagen ?></td>
-                                <td><?= $datos->descripcion ?></td>
-                                <td><?= $datos->precio ?></td>
-                                <td>
-                                    <a href="modificarPrenda.php?>id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-nib"></i></a>
-                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash-can"></i></a>
-                                </td>
-                            </tr>
-                        <?php }
-                        ?>
-                    </tbody>
-                </table>
+    <thead>
+        <tr>
+            <th scope="col">Referencia</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        include "apis/conexionDB.php";
+        $sql = $conexion->query("SELECT * FROM productos");
+        while ($datos = $sql->fetch_object()) {?>
+            <tr>
+                <td>
+                    <div class="d-flex flex-column">
+                        <span><?= $datos->id ?></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <span><?= $datos->nombre ?></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <img src="apis/imagen.php?imagen=<?= urlencode($datos->imagen) ?>" alt="Prenda" width="50">
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <span><?= $datos->descripcion ?></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <span><?= $datos->precio ?></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flex flex-column">
+                        <a href="modificarPrenda.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-nib"></i></a>
+                        <a onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?');" href="apis/eliminarProducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </td>
+            </tr>
+        <?php }
+        ?>
+    </tbody>
+    </table>
+
             </div>
             <div class="tab-pane fade" id="v-pills-ventas" role="tabpanel" aria-labelledby="v-pills-ventas-tab" tabindex="0">Ventas</div>
             <div class="tab-pane fade" id="v-pills-factura" role="tabpanel" aria-labelledby="v-pills-factura-tab" tabindex="0">Facturacion</div>

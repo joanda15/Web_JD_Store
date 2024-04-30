@@ -91,6 +91,7 @@ $(document).ready(function(){
             },
             success: function(response){
                 // Manejar la respuesta del servidor
+                window.location.href = 'perfilUsuario.php';
                 alert('Los cambios han sido guardados correctamente.');
             },
             error: function(xhr, status, error){

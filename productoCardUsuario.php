@@ -66,7 +66,17 @@ $precioProducto = "Prenda";
                         </tr>
                         <tr class="grid gap-3">
                             <td class="d-flex">
-                                <a href="#" onclick="mostrarAlerta();" class="m-1 btn btn-small btn-warning"><i class="fa-solid fa-cart-shopping"></i></a>
+                                <!-- Formulario envio a carritp -->
+                                <form action="carritoCompras.php" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $datos->id ?>">
+                                    <input type="hidden" name="nombre" value="<?php echo urlencode($datos->nombre) ?>">
+                                    <input type="hidden" name="imagen" value="<?php echo urlencode($datos->imagen) ?>">
+                                    <input type="hidden" name="descripcion" value="<?php echo urlencode($datos->descripcion) ?>">
+                                    <input type="hidden" name="precio" value="<?php echo $datos->precio ?>">
+                                    <button type="submit" class="m-1 btn btn-small btn-warning">
+                                        <i class="fa-solid fa-cart-shopping"></i> Añadir al carrito
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     </table>
@@ -77,9 +87,7 @@ $precioProducto = "Prenda";
     </table>
     <!-- Scripts -->
     <script>
-        function mostrarAlerta() {
-            alert("Registrate para poder realizar tus compras.");
-        }
     </script>
+
 </body>
 </html>

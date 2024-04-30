@@ -46,17 +46,17 @@
                     <li class="nav-item">
                         <a class="navbar-brand text-dark" href="#Contactos">Contactos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand text-dark" role="button" data-bs-toggle="modal" data-bs-target="#modalAdmin">Administrador</a>
-                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="Search">
                     <button class="btn btn-outline-danger me-2" type="submit">Buscar</button>
                 </form>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <img src="imgs/icons/BotonUser.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
-                </button>
+                <a href="perfilUsuario.php" type="button" class="btn btn-danger m-3">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="index.php" type="button" class="btn btn-danger">
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -212,17 +212,17 @@
     <div class="TextoTitulo" id="promocionesLista">
         <h1>Promociones</h1>
     </div>
-    <!-- Tarjeta prenda prom -->
+    <!-- Tarjeta prenda-->
     <div class="card-group">
         <!-- Tarjeta 1 -->
         <div class="card" style="width: 18rem;">
             <div class="prendaCard">
                 <?php
                 // Inclusion productoCard.php
-                include 'productoCard.php';
+                include 'productoCardUsuario.php';
                 ?>
             </div>
-        </div>
+        </div>    
     </div>
     <!-- Componente de Catalogo -->
     <div class="TextoTitulo">
@@ -235,10 +235,10 @@
             <div class="prendaCard">
                 <?php
                 // Inclusion productoCard.php
-                include 'productoCard.php';
+                include 'productoCardUsuario.php';
                 ?>
             </div>
-        </div>
+        </div>    
     </div>
     <!-- Shorts -->
     <H1 class="tituloCatalogo" id="shorts">Shorts</H1>
